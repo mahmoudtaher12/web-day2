@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: antiquewhite;
+
+    }
+    .signinpage, .signup{
+        text-align: center;
+        margin: 0.3vw;
+        align-items: center;  
+    }
+    
+</style>
+<body>
+    <div class="signinpage">
+    <input class="signup" placeholder="enter your name"  type="text" required><br>
+    <input class="signup" placeholder="enter your email"  type="text" required><br>
+    <input class="signup" placeholder="create password"  type="password" required><br>
+    <input class="signup" placeholder="confirm password"  type="password" required><br>
+    <div><span><input  type="checkbox"><p>i accept all condation & condations</p></span><br></div>
+     <button  type="submit"  name="submit" >register now</button><br>
+</div>
+<script>
+function validateform(){
+    var email = document.getElementById("email").value;
+    var erroremail = document.getElementById("erroremail");
+    var spacialcharregex=  /[!@#$%^&*(),.?":{}|<>]/;
+    if(spacialcharregex.test(email)){
+        emailerror.innerhtml="email must contain spacial char";
+        return false;
+       
+    } else{
+        emailerror.innerhtml=""
+    }
+    return true;
+
+}
+function validateForm() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var passwordError = document.getElementById("passwordError");
+
+      // Password confirmation
+      if (password !== confirmPassword) {
+        passwordError.innerHTML = "Passwords do not match!";
+        return false;
+      } else {
+        passwordError.innerHTML = "";
+      }
+    }
+
+</script>
+</body>
+</html>
